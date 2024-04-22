@@ -1,7 +1,7 @@
 package com.freemimp.main.data.di
 
 import com.freemimp.main.BuildConfig
-import com.freemimp.main.data.AuthInterceptor
+import com.freemimp.main.data.interceptors.AuthInterceptor
 import com.freemimp.main.data.MarvelApiService
 import com.squareup.moshi.Moshi
 import dagger.Module

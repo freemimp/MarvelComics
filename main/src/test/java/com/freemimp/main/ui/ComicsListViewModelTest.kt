@@ -1,7 +1,7 @@
 package com.freemimp.main.ui
 
 import app.cash.turbine.test
-import com.freemimp.main.domain.MarvelRepository
+import com.freemimp.main.domain.GetComicsUseCase
 import com.freemimp.main.domain.model.Comic
 import com.freemimp.main.utils.TestCoroutineExtension
 import io.mockk.clearAllMocks
@@ -19,7 +19,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 @ExtendWith(MockKExtension::class, TestCoroutineExtension::class)
 class ComicsListViewModelTest {
 
-    private val repository: MarvelRepository = mockk(relaxed = true)
+    private val getComicsUseCase: GetComicsUseCase = mockk(relaxed = true)
 
     @AfterEach
     fun tearDown() {
@@ -37,7 +37,7 @@ class ComicsListViewModelTest {
                     fullImageUrl = "url"
                 )
             )
-            coEvery { repository.getComics() } returns Result.success(comics)
+            coEvery { getComicsUseCase.execute() } returns Result.success(comics)
 
             val sut = createSut()
 
@@ -52,7 +52,7 @@ class ComicsListViewModelTest {
         runTest {
             val message = "Test error"
             val exception = Exception(message)
-            coEvery { repository.getComics() } returns Result.failure(exception)
+            coEvery { getComicsUseCase.execute() } returns Result.failure(exception)
 
             val sut = createSut()
 
@@ -73,7 +73,7 @@ class ComicsListViewModelTest {
                     fullImageUrl = "url"
                 )
             )
-            coEvery { repository.getComics() } returns Result.success(comics)
+            coEvery { getComicsUseCase.execute() } returns Result.success(comics)
 
             val sut = createSut()
 
@@ -85,5 +85,5 @@ class ComicsListViewModelTest {
         }
     }
 
-    private fun createSut(): ComicsListViewModel = ComicsListViewModel(repository)
+    private fun createSut(): ComicsListViewModel = ComicsListViewModel(getComicsUseCase)
 }

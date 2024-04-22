@@ -1,4 +1,4 @@
-package com.freemimp.main.data
+package com.freemimp.main.data.interceptors
 
 import okhttp3.Interceptor
 import okhttp3.Response

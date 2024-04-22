@@ -1,7 +1,7 @@
 package com.freemimp.main.data.di
 
 import com.freemimp.main.data.RetrofitMarvelApi
-import com.freemimp.main.domain.MarvelApi
+import com.freemimp.main.data.MarvelApi
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

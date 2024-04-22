@@ -1,7 +1,6 @@
 package com.freemimp.main.data
 
 import com.freemimp.main.data.mapper.ComicsMapper
-import com.freemimp.main.domain.MarvelApi
 import com.freemimp.main.domain.model.Comic
 import javax.inject.Inject
 

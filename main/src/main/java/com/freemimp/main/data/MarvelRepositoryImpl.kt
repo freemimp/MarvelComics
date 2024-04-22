@@ -1,6 +1,5 @@
 package com.freemimp.main.data
 
-import com.freemimp.main.domain.MarvelApi
 import com.freemimp.main.domain.MarvelRepository
 import com.freemimp.main.domain.model.Comic
 import javax.inject.Inject

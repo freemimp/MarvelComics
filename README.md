@@ -18,5 +18,5 @@ simplicity shows you the image or thumbnail if image url is absent
 
 - I used jetpack compose, hilt, jetpack compose navigation. Junit5, Mockk and Kotlin coroutines and flow
 - App is split by the feature,
-- A separate module created for snapshots, as it does not work well with Roboelectric  
-- 
+- A separate module created for snapshots, as it does have conflicts with some dependencies like Roboelectric.
+- This code is WIP

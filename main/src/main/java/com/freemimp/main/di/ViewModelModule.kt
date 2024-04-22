@@ -1,4 +1,4 @@
-package com.freemimp.main.data.di
+package com.freemimp.main.di
 
 import com.freemimp.main.data.MarvelRepositoryImpl
 import com.freemimp.main.domain.MarvelRepository

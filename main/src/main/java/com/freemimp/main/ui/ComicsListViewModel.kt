@@ -2,7 +2,7 @@ package com.freemimp.main.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.freemimp.main.domain.MarvelRepository
+import com.freemimp.main.domain.GetComicsUseCase
 import com.freemimp.main.domain.model.Comic
 import com.freemimp.main.utils.safeGetOrThrow
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ComicsListViewModel @Inject constructor(private val repository: MarvelRepository) :
+class ComicsListViewModel @Inject constructor(private val getComicsUseCase: GetComicsUseCase) :
     ViewModel() {
     private val _state = MutableStateFlow<ComicsListState>(ComicsListState.Loading)
     val state: StateFlow<ComicsListState> = _state
@@ -43,7 +43,7 @@ class ComicsListViewModel @Inject constructor(private val repository: MarvelRepo
         viewModelScope.launch {
             try {
                 val comics = if (::cachedComics.isInitialized.not()) {
-                    repository.getComics().safeGetOrThrow()
+                    getComicsUseCase.execute().safeGetOrThrow()
                 } else {
                     cachedComics
                 }

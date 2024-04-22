@@ -1,4 +1,4 @@
-package com.freemimp.main.domain
+package com.freemimp.main.data
 
 import com.freemimp.main.domain.model.Comic
 

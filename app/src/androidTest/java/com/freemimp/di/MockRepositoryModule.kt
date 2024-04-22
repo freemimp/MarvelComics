@@ -1,6 +1,6 @@
 package com.freemimp.di
 
-import com.freemimp.main.data.di.ViewModelModule
+import com.freemimp.main.di.ViewModelModule
 import com.freemimp.main.domain.MarvelRepository
 import com.freemimp.main.domain.model.Comic
 import dagger.Module

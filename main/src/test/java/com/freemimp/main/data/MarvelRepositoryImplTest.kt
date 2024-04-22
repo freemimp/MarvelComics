@@ -1,6 +1,5 @@
 package com.freemimp.main.data
 
-import com.freemimp.main.domain.MarvelApi
 import com.freemimp.main.domain.MarvelRepository
 import com.freemimp.main.domain.model.Comic
 import io.mockk.clearAllMocks
@@ -37,7 +36,7 @@ class MarvelRepositoryImplTest {
     }
 
     @Test
-    fun `given getComics is executed, when api call is NOT successful, then return Result_success with comics`() {
+    fun `given getComics is executed, when api call is NOT successful, then return Result_failure with error`() {
         runTest {
             val throwable = Throwable()
             coEvery { marvelApi.getComics() } returns Result.failure(throwable)
