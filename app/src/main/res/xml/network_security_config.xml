@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow all network traffic in debug builds -->
+    <base-config cleartextTrafficPermitted="false" />
+    <!-- Specific domain configuration for release builds -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">gateway.marvel.com</domain>
+        <domain includeSubdomains="true">i.annihil.us</domain>
+    </domain-config>
+</network-security-config>

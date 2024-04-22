@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FunctionNaming:ComicsListScreen.kt$@Composable fun ComicItem(comic: Comic, uiEvent: (UiEvent) -&gt; Unit)</ID>
+    <ID>FunctionNaming:ComicsListScreen.kt$@Composable fun ComicListSection(comics: List&lt;Comic&gt;, uiEvent: (UiEvent) -&gt; Unit)</ID>
+    <ID>FunctionNaming:ComicsListScreen.kt$@Composable fun ComicsContent( state: ComicsListState, uiEvent: (UiEvent) -&gt; Unit )</ID>
+    <ID>FunctionNaming:ComicsListScreen.kt$@Composable fun ComicsListScreen( viewModel: ComicsListViewModel = viewModel(), navHost: NavHostController = rememberNavController() )</ID>
+    <ID>FunctionNaming:ComicsListScreen.kt$@Composable fun ErrorSection(modifier: Modifier, message: String)</ID>
+    <ID>FunctionNaming:ComicsListScreen.kt$@Composable fun LoadingSection()</ID>
+    <ID>MaxLineLength:ComicsListViewModelTest.kt$ComicsListViewModelTest$fun</ID>
+    <ID>MaxLineLength:RetrofitMarvelApiTest.kt$RetrofitMarvelApiTest$fun</ID>
+    <ID>TooGenericExceptionCaught:ComicsListViewModel.kt$ComicsListViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:RetrofitMarvelApi.kt$RetrofitMarvelApi$t: Throwable</ID>
+  </CurrentIssues>
+</SmellBaseline>

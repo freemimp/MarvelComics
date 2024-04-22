@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FunctionNaming:ComicsDetailsScreen.kt$@Composable fun ComicsDetailsScreen( viewModel: ComicsDetailsViewModel = viewModel(), imageUrl: String )</ID>
+    <ID>FunctionNaming:ComicsDetailsScreen.kt$@Composable fun ImageSection(fullImageUrl: String)</ID>
+    <ID>FunctionNaming:ComicsDetailsScreen.kt$@Composable fun LoadingSection()</ID>
+    <ID>FunctionNaming:ComicsDetailsScreen.kt$@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter") @Composable fun ComicsDetailsContent( state: ComicsDetailsState, imageUrl: String, uiEvent: (UiEvent) -&gt; Unit )</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "MarvelComics"
 include(":app")
+include(":main")
+include(":details")
+include(":snapshottests")
